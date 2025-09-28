@@ -21,7 +21,7 @@ export class UserRepositoryImpl implements UserRepository {
       linkedin: "https://www.linkedin.com/in/luiz-augusto-monteiro-528385292/",
       github: "https://github.com/luizaugustom",
       projects: [],
-      extraText: "I am currently a developer at Laev Software Desenvolvimento and I am also a member of the Rockeseat community, the largest developer community in Latin America.",
+      extraText: "I am currently a developer at Laev Software Desenvelopment and I am also a member of the Rockeseat community, the largest developer community in Latin America.",
     };
   }
 }
