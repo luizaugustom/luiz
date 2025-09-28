@@ -20,7 +20,74 @@
 }
 
 body {
-  background: var(--background);
+  background: linear-gradient(120deg, #181824 0%, #232136 100%);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.animated-bg, .nebula, .stars {
+  display: none !important;
+}
+
+.no-scrollbar {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+@keyframes pulse-soft {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.03); }
+  100% { transform: scale(1); }
+}
+.pulse-soft {
+  animation: pulse-soft 2.8s ease-in-out infinite;
+}
+
+.title-border {
+  -webkit-text-stroke: 0px;
+}
+.text-title-dark {
+  color: #3b1c6b;
+}
+.text-title-light {
+  color: #bda4e6;
+}
+
+.comet-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: -1;
+}
+.comet {
+  position: absolute;
+  width: 4px;
+  height: 60px;
+  background: linear-gradient(180deg, #fff 0%, #7c3aed 100%);
+  border-radius: 2px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation: comet-fall 6s linear infinite;
+}
+@keyframes comet-fall {
+  0% {
+    top: -80px;
+    opacity: 0.7;
+  }
+  80% {
+    opacity: 0.7;
+  }
+  100% {
+    top: 100vh;
+    opacity: 0;
+  }
 }
