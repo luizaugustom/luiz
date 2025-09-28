@@ -3,8 +3,13 @@
 import { useEffect, useState } from "react";
 import { fetchGithubProjects } from "../../infra/services/githubService";
 
+interface GithubProject {
+  name: string;
+  url: string;
+}
+
 export function Projects() {
-  const [projects, setProjects] = useState<any[]>([]);
+  const [projects, setProjects] = useState<GithubProject[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
 
